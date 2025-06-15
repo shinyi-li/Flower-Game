@@ -1,7 +1,24 @@
+/* Define CSS variables at the root level */
+:root {
+  --Brown: #67452d; /* A warm brown color for text */
+  --light-beige: #f0e6d2; /* A light, warm background color */
+  --dark-green: #3a5c3b; /* A darker green, perhaps for accents */
+}
+
+/* Apply a background color to the entire body */
+body {
+  background-color: var(--light-beige); /* Use the defined variable for background */
+  margin: 0; /* Remove default body margin */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes full viewport height */
+  font-family: 'Pixelify Sans', sans-serif; /* Fallback font */
+}
+
 /*text style */
 
 h1 {
-  color: var(--Brown, #67452d);
+  color: var(--Brown);
   text-align: center;
 
   font-family: 'Pixelify Sans';
@@ -9,6 +26,38 @@ h1 {
   font-style: normal;
   font-weight: 400;
   line-height: 2.62619rem;
+  margin-bottom: 1rem;
+  /* leave bottom margin for spacing i think? */
+}
+
+h2 {
+  color: var(--Brown);
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+h4 {
+  color: var(--dark-green);
+  font-family: 'Pixelify Sans', sans-serif;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  /*padding: 30px; */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.shrink-close-icons {
+  display: flex;
+  gap: 10px; /* Space between icons */
+  padding: 10px 10px;
 }
 
 .shrink-icon {
@@ -23,6 +72,11 @@ h1 {
   object-fit: cover;
 }
 
+.shrink-icon:hover,
+.close-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
 .start-container {
   display: flex;
   flex-direction: column;
@@ -32,4 +86,28 @@ h1 {
   flex-grow: 1;
   gap: 1rem;
   max-width: 230px;
+  padding: 30px; /* Add padding inside the container */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+/* Style for the start button */
+#start-btn {
+  background-color: var(--dark-green); /* Green button background */
+  color: white;
+  padding: 12px 25px; /* Increased padding */
+  border: none;
+  border-radius: 8px; /* Rounded button corners */
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Button shadow */
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+#start-btn:hover {
+  background-color: #4a744b; /* Slightly darker green on hover */
+  transform: translateY(-2px); /* Lift button slightly on hover */
 }
