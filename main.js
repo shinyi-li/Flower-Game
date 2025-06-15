@@ -6,7 +6,6 @@ const createWindow = () => {
     height: 500,
   });
 
-  //win.loadFile('index.html');
   // Load the startpage.html file
   win.loadFile('startpage.html');
   win.webContents.openDevTools();
