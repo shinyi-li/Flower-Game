@@ -3,7 +3,8 @@ const { app, BrowserWindow } = require('electron');
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 350,
-    height: 500,
+    height: 450,
+    resizable: false,
   });
 
   // Load the startpage.html file

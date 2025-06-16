@@ -3,13 +3,18 @@
   --Brown: #67452d; /* A warm brown color for text */
   --light-beige: #f0e6d2; /* A light, warm background color */
   --dark-green: #3a5c3b; /* A darker green, perhaps for accents */
+  --light-orange: #f4dfa7;
 }
 
 /* Apply a background color to the entire body */
 body {
-  background-color: var(--light-beige); /* Use the defined variable for background */
+  background-color: var(--light-orange); /* Use the defined variable for background */
   margin: 0; /* Remove default body margin */
   display: flex;
+  left: 0px;
+  top: 0px;
+  width: 350px;
+  height: 450px;
   flex-direction: column;
   min-height: 100vh; /* Ensure body takes full viewport height */
   font-family: 'Pixelify Sans', sans-serif; /* Fallback font */
@@ -110,4 +115,14 @@ h4 {
 #start-btn:hover {
   background-color: #4a744b; /* Slightly darker green on hover */
   transform: translateY(-2px); /* Lift button slightly on hover */
+}
+
+/* clouds */
+.clouds-image {
+  position: absolute;
+  left: -55px;
+  top: -45px;
+  width: 489px;
+  height: 489px;
+  border-radius: 0px 0px 0px 0px;
 }
