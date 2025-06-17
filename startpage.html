@@ -13,22 +13,54 @@
       <img src="assets/clouds.png" alt="Clouds" class="clouds-image" />
     </div>
 
+    <!-- rect: border-clouds -->
+    <div class="shape rect border"></div>
+
     <!-- Header Section -->
     <header>
-      <div class="header-container">
-        <h2>Flower Garden <code>&lt;3</code></h2>
-        <div class="shrink-close-icons">
-          <img src="assets/shrink_icon.png" alt="Shrink Icon" class="shrink-icon" />
-          <img src="assets/close_icon.png" alt="Close Icon" class="close-icon" />
+      <div class="shrink-close-icons">
+        <img src="assets/shrink_icon.png" alt=" Shrink Icon" class="shrink-icon" />
+        <img src="assets/close_icon.png" alt="Close Icon" class="close-icon" />
+      </div>
+
+      <div class="drink-time">
+        <div class="text-node-html" id="html-text-node" data-x="10" data-y="13">
+          <p class="paragraph" dir="ltr">
+            <span class="text-node">Drink Time! &lt;3 </span>
+          </p>
         </div>
       </div>
     </header>
 
     <main>
+      <!--
       <div class="start-container">
         <h1>Let's time your flower!</h1>
         <button id="start-btn">Start</button>
+      </div> -->
+
+      <!-- text: Let's time your drink! -->
+      <div class="let-time">
+        <div class="text-node-html" id="html-text-node" data-x="62" data-y="161">
+          <p class="paragraph" dir="ltr">
+            <span class="text">Let&#x27;s time your drink!</span>
+          </p>
+        </div>
       </div>
+
+      <div class="button-start" id="button-start"></div>
+
+      <div class="start-text">
+        <p class="paragraph" dir="ltr">
+          <span class="text">Start</span>
+        </p>
+      </div>
+
+      <script>
+        document.getElementById('button-start').addEventListener('click', function () {
+          window.location.href = 'menu.html';
+        });
+      </script>
     </main>
   </body>
 </html>

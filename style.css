@@ -2,7 +2,6 @@
 :root {
   --Brown: #67452d; /* A warm brown color for text */
   --light-beige: #f0e6d2; /* A light, warm background color */
-  --dark-green: #3a5c3b; /* A darker green, perhaps for accents */
   --light-orange: #f4dfa7;
 }
 
@@ -18,6 +17,7 @@ body {
   flex-direction: column;
   min-height: 100vh; /* Ensure body takes full viewport height */
   font-family: 'Pixelify Sans', sans-serif; /* Fallback font */
+  overflow: hidden;
 }
 
 /*text style */
@@ -46,19 +46,6 @@ h4 {
   text-align: center;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 10px 20px;
-  /*padding: 30px; */
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent header */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
 .shrink-close-icons {
   display: flex;
   gap: 10px; /* Space between icons */
@@ -66,15 +53,25 @@ h4 {
 }
 
 .shrink-icon {
-  width: 28px;
-  height: 28px;
+  /*width: 28px;
+  height: 28px; */
   object-fit: cover;
+  position: absolute;
+  left: 272px;
+  top: 8px;
+  width: 32px;
+  height: 32px;
 }
 
 .close-icon {
-  width: 28px;
-  height: 28px;
+  /*width: 28px;
+  height: 28px; */
   object-fit: cover;
+  position: absolute;
+  left: 312px;
+  top: 8px;
+  width: 32px;
+  height: 32px;
 }
 
 .shrink-icon:hover,
@@ -82,40 +79,7 @@ h4 {
   transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-.start-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-grow: 1;
-  gap: 1rem;
-  max-width: 230px;
-  padding: 30px; /* Add padding inside the container */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* More prominent shadow */
-  font-family: 'Pixelify Sans', sans-serif;
-}
-
-/* Style for the start button */
-#start-btn {
-  background-color: var(--dark-green); /* Green button background */
-  color: white;
-  padding: 12px 25px; /* Increased padding */
-  border: none;
-  border-radius: 8px; /* Rounded button corners */
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Button shadow */
-  font-family: 'Pixelify Sans', sans-serif;
-}
-
-#start-btn:hover {
-  background-color: #4a744b; /* Slightly darker green on hover */
-  transform: translateY(-2px); /* Lift button slightly on hover */
-}
+/* start the main elements on main part */
 
 /* clouds */
 .clouds-image {
@@ -125,4 +89,135 @@ h4 {
   width: 489px;
   height: 489px;
   border-radius: 0px 0px 0px 0px;
+}
+
+/* border-clouds */
+.border {
+  position: absolute;
+  left: 6px;
+  top: 46px;
+  width: 334px;
+  height: 396px;
+  border: 2px solid #e5a73dff;
+  border-radius: 0px 0px 0px 0px;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Aclonica';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/aclonica/v24/K2FyfZJVlfNNSEBXGY7UAo8.woff2)
+    format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+/* Drink Time! <3 */
+.drink-time {
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  width: 215px;
+  height: 31px;
+}
+
+.drink-time .paragraph {
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.drink-time .text-node {
+  color: rgba(134, 86, 2, 1);
+  text-transform: none;
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: break-spaces;
+  font-size: 24px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(134, 86, 2, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: 'Aclonica';
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* center text */
+/* Let's time your drink! */
+.let-time {
+  position: absolute;
+  left: 62px;
+  top: 160px;
+  width: 226px;
+  height: 38px;
+}
+
+.let-time .paragraph {
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+}
+
+.let-time .text {
+  color: rgba(85, 54, 0, 1);
+  text-transform: none;
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: break-spaces;
+  font-size: 36px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(85, 54, 0, 1);
+  letter-spacing: 0px;
+  font-family: 'Aclonica';
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* button rectangle */
+.button-start {
+  position: absolute;
+  left: 99px;
+  top: 265px;
+  width: 159px;
+  height: 34px;
+  background: #f4dfa7ff;
+  border: 2px solid #e5a73dff;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.button-start:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* button start text */
+.start-text {
+  position: absolute;
+  left: 144px;
+  top: 272px;
+  width: 77px;
+  height: 29px;
+  pointer-events: none;
+}
+
+.start-text .paragraph {
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+}
+
+.start-text .text {
+  color: rgba(134, 86, 2, 1);
+  text-transform: none;
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: break-spaces;
+  font-size: 22px;
+  text-rendering: geometricPrecision;
+  letter-spacing: 0px;
+  font-family: 'Aclonica';
+  font-style: normal;
+  font-weight: 400;
 }
