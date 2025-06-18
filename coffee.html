@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu</title>
+    <title>Coffee Time!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -33,33 +33,40 @@
     </header>
 
     <main>
-      <!-- start text -->
-      <div class="menu-start-text">
-        <p class="paragraph" dir="ltr">
-          <span class="text">What are you making today?</span>
-        </p>
+      <!-- timer part testing -->
+
+      <div class="countdown-container">
+        <div class="countdown">3:00</div>
       </div>
 
-      <!-- rect: matcha -->
-      <div class="drink-icons">
-        <img src="assets/matcha.png" alt="Matcha Icon" class="matcha-icon" />
-        <img src="assets/boba.png" alt="Boba Icon" class="boba-icon" id="boba-icon" />
+      <!-- coffee image -->
+      <div class="coffee-container">
         <img
           src="assets/coffee.png"
           alt="Coffee Icon"
-          class="coffee-icon"
-          id="coffee-icon"
+          class="coffee-image"
+          id="coffee-image"
         />
-        <img src="assets/cocktail.png" alt="Cocktail Icon" class="cocktail-icon" />
       </div>
 
       <script>
-        document.getElementById('coffee-icon').addEventListener('click', function () {
-          window.location.href = 'coffee.html';
-        });
-        document.getElementById('boba-icon').addEventListener('click', function () {
-          window.location.href = 'boba.html';
-        });
+        // ===== 5-Minute Countdown Timer =====
+        let timeLeft = 180;
+
+        function updateCountdown() {
+          const minutes = Math.floor(timeLeft / 60);
+          const seconds = timeLeft % 60;
+          const formattedTime = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+          document.querySelector('.countdown').textContent = formattedTime;
+          timeLeft--;
+
+          if (timeLeft < 0) {
+            clearInterval(timer);
+            document.querySelector('.countdown').textContent = '00:00';
+          }
+        }
+        const timer = setInterval(updateCountdown, 1000);
       </script>
     </main>
   </body>
