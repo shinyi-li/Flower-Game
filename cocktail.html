@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boba Time!</title>
+    <title>Cocktail Time!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -36,17 +36,22 @@
       <!-- timer part testing -->
 
       <div class="countdown-container">
-        <div class="countdown">10:00</div>
+        <div class="countdown">20:00</div>
       </div>
 
       <!-- coffee image -->
-      <div class="boba-container">
-        <img src="assets/boba.png" alt="Boba Icon" class="boba-image" id="boba-image" />
+      <div class="cocktail-container">
+        <img
+          src="assets/cocktail.png"
+          alt="Cocktail Icon"
+          class="cocktail-image"
+          id="cocktail-image"
+        />
       </div>
 
       <script>
-        // ===== 10-Minute Countdown Timer =====
-        let timeLeft = 600;
+        // ===== 5-Minute Countdown Timer =====
+        let timeLeft = 1200;
 
         function updateCountdown() {
           const minutes = Math.floor(timeLeft / 60);

@@ -286,7 +286,7 @@ h4 {
 .cocktail-icon {
   position: absolute;
   left: 133px;
-  top: 213px;
+  top: 210px;
   width: 207px;
   height: 207px;
   clip-path: inset(60px 60px 20px 60px);
@@ -338,6 +338,24 @@ h4 {
   position: absolute;
   left: 60px;
   top: 50px;
+  width: 240px;
+  height: 240px;
+  clip-path: inset(30px 60px 20px 50px);
+}
+
+.matcha-image {
+  position: absolute;
+  left: 55px;
+  top: 50px;
+  width: 240px;
+  height: 240px;
+  clip-path: inset(30px 60px 20px 50px);
+}
+
+.cocktail-image {
+  position: absolute;
+  left: 58px;
+  top: 56px;
   width: 240px;
   height: 240px;
   clip-path: inset(30px 60px 20px 50px);

@@ -42,7 +42,12 @@
 
       <!-- rect: matcha -->
       <div class="drink-icons">
-        <img src="assets/matcha.png" alt="Matcha Icon" class="matcha-icon" />
+        <img
+          src="assets/matcha.png"
+          alt="Matcha Icon"
+          class="matcha-icon"
+          id="matcha-icon"
+        />
         <img src="assets/boba.png" alt="Boba Icon" class="boba-icon" id="boba-icon" />
         <img
           src="assets/coffee.png"
@@ -50,7 +55,12 @@
           class="coffee-icon"
           id="coffee-icon"
         />
-        <img src="assets/cocktail.png" alt="Cocktail Icon" class="cocktail-icon" />
+        <img
+          src="assets/cocktail.png"
+          alt="Cocktail Icon"
+          class="cocktail-icon"
+          id="cocktail-icon"
+        />
       </div>
 
       <script>
@@ -59,6 +69,12 @@
         });
         document.getElementById('boba-icon').addEventListener('click', function () {
           window.location.href = 'boba.html';
+        });
+        document.getElementById('matcha-icon').addEventListener('click', function () {
+          window.location.href = 'matcha.html';
+        });
+        document.getElementById('cocktail-icon').addEventListener('click', function () {
+          window.location.href = 'cocktail.html';
         });
       </script>
     </main>
